@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ImagesVM>
+
+    <table style="width:100%; text-align:center" class="table table-bordered">
+        <tr>
+            <td>
+                <b>Images</b>
+            </td>
+            <td>
+                <input type="checkbox" id="checkBoxAll" class="custom-checkbox" />
+            </td>
+        </tr>
+        
+        @foreach (var item in Model)
+         {
+            <tr>
+                <td>
+                    <img width="200" src="~/Files/ImagesGallery/@item.Name" alt="@item.Name" />
+                </td>
+                <td>
+                <input type="checkbox" name="ImageId" value="@item.Id" class="custom-checkbox chkCheckBoxId" />
+                </td>
+            </tr>
+         }
+        
+    </table>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#checkBoxAll').click(function () {
+                if ($(this).is(":checked")) {
+                    $(".chkCheckBoxId").prop("checked", true)
+                }
+                else {
+                    $(".chkCheckBoxId").prop("checked", false)
+                }
+            });
+
+        });
+
+    </script>

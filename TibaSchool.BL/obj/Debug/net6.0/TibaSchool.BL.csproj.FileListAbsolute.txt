@@ -1,0 +1,45 @@
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.BL.deps.json
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.BL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.BL.pdb
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.csproj.AssemblyReference.cache
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.AssemblyInfoInputs.cache
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.AssemblyInfo.cs
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.csproj.CoreCompileInputs.cache
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\refint\TibaSchool.BL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.pdb
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\ref\TibaSchool.BL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.DAL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.DAL.pdb
+E:\Web Development\Work\Wide Horizon\Tiba School\Code\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.csproj.CopyComplete
+D:\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.BL.deps.json
+D:\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.BL.dll
+D:\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.BL.pdb
+D:\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.DAL.dll
+D:\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.DAL.pdb
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.csproj.AssemblyReference.cache
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.AssemblyInfoInputs.cache
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.AssemblyInfo.cs
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.csproj.CoreCompileInputs.cache
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.csproj.CopyComplete
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.dll
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\refint\TibaSchool.BL.dll
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.pdb
+D:\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\ref\TibaSchool.BL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.BL.deps.json
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.BL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.BL.pdb
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.DAL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\bin\Debug\net6.0\TibaSchool.DAL.pdb
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.csproj.AssemblyReference.cache
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.AssemblyInfoInputs.cache
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.AssemblyInfo.cs
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.csproj.CoreCompileInputs.cache
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.csproj.CopyComplete
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\refint\TibaSchool.BL.dll
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\TibaSchool.BL.pdb
+E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.BL\obj\Debug\net6.0\ref\TibaSchool.BL.dll

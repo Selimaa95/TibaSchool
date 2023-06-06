@@ -1,0 +1,287 @@
+﻿@model ImgFolderVM
+
+@inject IFolder folder
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!-- #region Styles -->
+@section Styles
+    {
+
+    @*  <!--external css-->
+        <link href="~/css/section style/font-awesome.css" rel="stylesheet" />
+        <!-- Custom styles for this template -->
+        <link href="~/css/section style/style.css" rel="stylesheet" />
+        <link href="~/css/section style/style-responsive.css" rel="stylesheet" />
+        <!-- blueimp Gallery styles -->
+        <link rel="stylesheet" href="~/https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+        <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+        <link href="~/css/section style/file-uploader/css/jquery.fileupload.css" rel="stylesheet" />
+        <link href="~/css/section style/file-uploader/css/jquery.fileupload-ui.css" rel="stylesheet" />
+        <!-- CSS adjustments for browsers with JavaScript disabled -->
+        <noscript>
+            <link href="~/css/section style/file-uploader/css/jquery.fileupload-noscript.css" rel="stylesheet" />
+        </noscript>
+        <noscript>
+            <link href="~/css/section style/file-uploader/css/jquery.fileupload-ui-noscript.css" rel="stylesheet" />
+        </noscript>*@
+
+
+}
+
+<!-- #endregion -->
+
+<h2 class="text-center">Add Images To Gallery</h2>
+<hr />
+@{
+    if (ViewBag.Success != null)
+    {
+        <span class="alert-success text-bg-success">@ViewBag.Success</span>
+            <hr />
+    }
+    if (ViewBag.Error != null)
+    {
+        <span class="text-danger">@ViewBag.Error</span>
+        <hr />
+    }
+}
+
+<!-- #region Folder -->
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Add Folder</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Images" asp-action="CreateFolder" class="form-group" enctype="multipart/form-data">
+
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label asp-for="Name">Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" asp-for="Name" placeholder="Folder's Name" Class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12" style="margin-top:5px;">
+                <div class="col-lg-4">
+                    <label>Folder's Image</label>
+                </div>
+                <div class="col-lg-6 fileupload-buttonbar">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Upload Image</span>
+                        <input type="file" asp-for="Image" id="FolderImage">
+                        &nbsp;&nbsp;
+                        <span id="ImgFolderName"></span>
+                    </span><br />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Save" class="btn btn-lg btn-primary" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- #endregion -->
+<!-- #region Album -->
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Add Album</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Images" asp-action="CreateAlbum" class="form-group" enctype="multipart/form-data">
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Folder's Name To Add Album In</label>
+                </div>
+                <div class="col-lg-6">
+                    <select asp-for="FolderId" class="form-control">
+                        <option>Choose Folder</option>
+                        @foreach (var item in await folder.GetAllAsync())
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                    <br />
+                    <span asp-validation-for="FolderId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label asp-for="Name">Album's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" asp-for="Name" placeholder="Album's Name" Class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="row col-lg-12" style="margin-top:5px;">
+                <div class="col-lg-4">
+                    <label>Album's Image</label>
+                </div>
+                <div class="col-lg-6 fileupload-buttonbar">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Upload Image</span>
+                        <input type="file" asp-for="Image" id="AlbumImage">
+                        &nbsp;&nbsp;
+                        <span id="ImgAlbumName"></span>
+                    </span><br />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+
+
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" name="submit" value="Save" class="btn btn-lg btn-primary" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- #endregion -->
+<!-- #region Images -->
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Add Images</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Images" asp-action="CreateImages" class="form-group" enctype="multipart/form-data">
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <select id="FolderList" asp-for="FolderId" class="form-control">
+                        <option>Choose Folder</option>
+                        @foreach (var item in await folder.GetAllAsync())
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                </div>
+                <span asp-validation-for="FolderId" class="text-danger"></span>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Album's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <select id="AlbumList" asp-for="AlbumId" class="form-control">
+                        <option>Choose Album</option>
+                    </select>
+                </div>
+                <span asp-validation-for="AlbumId" class="text-danger"></span>
+
+            </div>
+            <div class="row col-lg-12" style="margin-top:5px;">
+                <div class="col-lg-4">
+                    <label>Upload Images</label>
+                </div>
+                <div class="col-lg-6 fileupload-buttonbar">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Upload Images</span>
+                        <input type="file" asp-for="ImagesList" id="Images" multiple>
+                        &nbsp;&nbsp;
+                        <span id="ImgName"></span>
+                    </span><br />
+                    <span asp-validation-for="ImagesList" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Save" class="btn btn-lg btn-primary" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+<!-- #endregion -->
+<!-- #region Scripts -->
+@section JaqueryValidation
+    {
+    <script src="~/js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="~/jquery-validation/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+}
+
+@section AJaxScripts
+    {
+    <!-- #region Ajax Script -->
+    <script>
+
+        $(document).ready(function () {
+
+            $("#FolderImage").change(function () {
+                $("#ImgFolderName").text($(this).val().replace("C:\\fakepath\\", " "));
+            });
+
+            $("#AlbumImage").change(function () {
+                $("#ImgAlbumName").text($(this).val().replace("C:\\fakepath\\", " "));
+            });
+
+            $("#Images").change(function () {
+                var count = $(this)[0].files
+                $("#ImgName").text(count.length + " Selected");
+            });
+
+        });
+
+        $(function () {
+
+            $("#FolderList").change(function () {
+                $("#AlbumList").empty();
+                $("#AlbumList").append("<option>Choose Album</option>");
+
+                var FolderId = $("#FolderList option:selected").val();
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "/Images/GetAlbumByFolderId",
+                    data: { folderId: FolderId },
+                    success: function (res) {
+                        $.each(res, function (i, e) {
+
+                            $("#AlbumList").append("<option value='" + e.Id + "'>" + e.Name + "</option>");
+
+                        });
+
+                        $('select').selectpiker('refresh');
+                    }
+                });
+            });
+        });
+
+
+
+    </script>
+
+
+
+
+    <!-- #endregion -->
+}
+<!-- #endregion -->

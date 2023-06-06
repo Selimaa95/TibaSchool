@@ -1,0 +1,157 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TibaSchool.PL
+build_property.RootNamespace = TibaSchool.PL
+build_property.ProjectDir = E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.PL\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Web Development\Work\Wide Horizon\Tiba School\new\TibaSchool\TibaSchool.PL
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Account/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Account/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/AdminPanel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Contact/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Event/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Event/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Event/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Event/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Event/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/Admission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pc3Npb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/Appeals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcHBlYWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/FolderAlbums.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb2xkZXJBbGJ1bXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/Gallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYWxsZXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/ImageFolders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbWFnZUZvbGRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/Images.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbWFnZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/News.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/OurSchool.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPdXJTY2hvb2wuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/Subjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWJqZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/VideoFolders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWRlb0ZvbGRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Home/Videos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWRlb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Images/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Images/EditDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VzXEVkaXREZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Partials/_imageFolderForVideo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcX2ltYWdlRm9sZGVyRm9yVmlkZW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Shared/AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Shared/_imageAlbum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9pbWFnZUFsYnVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Shared/_imageFolder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9pbWFnZUZvbGRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Shared/_imageToDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9pbWFnZVRvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Shared/_videoToDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF92aWRlb1RvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Videos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Videos/EditDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9zXEVkaXREZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Web Development/Work/Wide Horizon/Tiba School/new/TibaSchool/TibaSchool.PL/Views/Shared/MainLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wbwz7vsg23

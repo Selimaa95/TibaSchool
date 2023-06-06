@@ -1,0 +1,53 @@
+﻿@model EventVM
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Delete <span style="color:#2c7be5">@Model.Title</span></h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Event" asp-action="Delete" class="form-group">
+
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label asp-for="Title">Title</label>
+                <input type="text" asp-for="Title" class="form-control" readonly />
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="Date">Date</label>
+                <input type="date" asp-for="Date" class="form-control" readonly />
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="ImageName">Image</label><br />
+                <img src="~/Files/UploadedImages/@Model.ImageName" alt="@Model.Title" width="300" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description">Description</label>
+                <textarea asp-for="Description" rows="4" class="form-control" readonly></textarea>
+            </div>
+
+            <center>
+                <input type="submit" value="Delete" class="btn btn-danger" />
+                <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-warning">Update</a>
+                <a asp-action="Index" class="btn btn-success">Return</a>
+            </center>
+            <br />
+
+        </form>
+    </div>
+</div>
+
+
+

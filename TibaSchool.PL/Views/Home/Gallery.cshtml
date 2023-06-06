@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Gallery";
+}
+
+
+<!-- #region Content -->
+<!-- Title Page -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(/images/bg-title-page-02.jpg);">
+    <h2 class="tit6 t-center">
+        Gallery
+    </h2>
+</section>
+
+
+<!-- Gallery -->
+<div class="container" style="margin-bottom: 10px;">
+
+    <br /><br />
+    <div class="title-section-ourmenu t-center m-b-22">
+        <h3 class="tit5 t-center m-t-2" style="color:darkred">
+            Gallery Folders
+        </h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1 p-t-50"></div>
+        <div class="col-md-4 p-t-50">
+            <!-- Block1 -->
+            <div class="blo1">
+                <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+                    <a asp-controller="Home" asp-action="GetImageFolders"><img src="/images/phoca-gallery-r.png" alt="IMG-INTRO" height="250"></a>
+                </div>
+                <div class="wrap-text-blo1 p-t-35 text-center">
+                    <a asp-controller="Home" asp-action="GetImageFolders">
+                        <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                            IMAGES
+                        </h4>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-2 p-t-50"></div>
+
+        <div class="col-md-4 p-t-50">
+            <!-- Block1 -->
+            <div class="blo1">
+                <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+                    <a asp-controller="Home" asp-action="GetVideoFolders"><img src="/images/youtube.png" alt="IMG-INTRO" height="250"></a>
+                </div>
+
+                <div class="wrap-text-blo1 p-t-35 text-center">
+                    <a asp-controller="Home" asp-action="GetVideoFolders">
+                        <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                            VIDEOS
+                        </h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 p-t-50"></div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- #endregion -->
+
+<!-- #region JS Librariese -->
+@section JSLibrary
+    {
+    <script type="text/javascript" src="~/vendor/isotope/isotope.pkgd.min.js"></script>
+}
+<!-- #endregion -->

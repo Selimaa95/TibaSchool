@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ImagesVM>
+
+@{
+    ViewData["Title"] = "Images";
+}
+
+
+<!-- #region Content -->
+<!-- Title Page -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(/images/bg-title-page-02.jpg);">
+    <h2 class="tit6 t-center">
+        Images
+    </h2>
+</section>
+
+
+<!-- Gallery -->
+<div class="container" style="margin-bottom: 10px;">
+
+    <br />
+    <div class="title-section-ourmenu t-center m-b-22">
+        <h3 class="tit5 t-center m-t-2" style="color:darkred">
+            Images
+        </h3>
+    </div>
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 p-t-50">
+                <!-- Block1 -->
+                <div class="blo1">
+                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+                        <a>
+                            <img src="~/Files/ImagesGallery/@item.Name" alt="@item.Name" height="300">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+
+</div>
+
+
+<!-- #endregion -->
+<!-- #region JS Librariese -->
+@section JSLibrary
+    {
+    <script type="text/javascript" src="~/vendor/isotope/isotope.pkgd.min.js"></script>
+}
+<!-- #endregion -->

@@ -1,0 +1,186 @@
+﻿@inject IVideoFolder folder
+@model VideoVM
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!-- #region Styles -->
+@section Styles
+    {
+
+
+
+
+}
+
+<!-- #endregion -->
+
+<h2 class="text-center">Add Videos To Gallery</h2>
+<hr />
+
+@{
+    if (ViewBag.Success != null)
+    {
+        <span class="alert-success text-bg-success">@ViewBag.Success</span>
+        <hr />
+    }
+    if (ViewBag.Error != null)
+    {
+        <span class="text-danger">@ViewBag.Error</span>
+        <hr />
+    }
+}
+
+<!-- #region Folder -->
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Add Folder</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Videos" asp-action="CreateFolder" class="form-group" enctype="multipart/form-data">
+
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label asp-for="Name">Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" asp-for="Name" placeholder="Folder's Name" Class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12" style="margin-top:5px;">
+                <div class="col-lg-4">
+                    <label>Folder's Image</label>
+                </div>
+                <div class="col-lg-6 fileupload-buttonbar">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Upload Image</span>
+                        <input type="file" id="FolderImage" asp-for="Image">
+                        &nbsp;&nbsp;
+                        <span id="ImgFolderName"></span>
+                    </span><br />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Save" class="btn btn-lg btn-primary" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!-- #endregion -->
+
+<!-- #region Videos -->
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Add Videos</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Videos" asp-action="CreateVideo" class="form-group" enctype="multipart/form-data">
+
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Folder's Name To Add Videos In</label>
+                </div>
+                <div class="col-lg-6">
+                    <select asp-for="FolderId" class="form-control">
+                        <option>Choose Folder</option>
+                        @foreach (var item in await folder.GetAllAsync())
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                </div>
+                <span asp-validation-for="FolderId" class="text-danger"></span>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label asp-for="Name">Video's Tiltle</label>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" asp-for="Name" placeholder="Video's Tiltle" Class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label asp-for="Path">Video's Path</label>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" asp-for="Path" placeholder="Video's Path" Class="form-control" />
+                    <span asp-validation-for="Path" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="row col-lg-12" style="margin-top:5px;">
+                <div class="col-lg-4">
+                    <label>Video's Image</label>
+                </div>
+                <div class="col-lg-6 fileupload-buttonbar">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Upload Image</span>
+                        <input type="file" id="Image" asp-for="Image">
+                        &nbsp;&nbsp;
+                        <span id="ImgName"></span>
+                    </span><br />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Save" class="btn btn-lg btn-primary" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!-- #endregion -->
+
+<!-- #region Scripts -->
+@section JaqueryValidation
+    {
+    <script src="~/js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="~/jquery-validation/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+}
+
+@section AJaxScripts
+    {
+
+    <script>
+
+        $("#FolderImage").change(function () {
+            $("#ImgFolderName").text($(this).val().replace("C:\\fakepath\\", " "));
+        });
+
+        $("#Image").change(function () {
+            $("#ImgName").text($(this).val().replace("C:\\fakepath\\", " "));
+        });
+
+    </script>
+
+}
+
+<!-- #endregion -->

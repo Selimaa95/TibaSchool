@@ -1,0 +1,185 @@
+﻿@inject IVideoFolder folder
+@model VideoEditDeleteVM
+@{
+    ViewData["Title"] = "EditDelete";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!-- #region Styles -->
+@section Styles
+    {
+
+
+
+}
+
+<!-- #endregion -->
+
+<h2 class="text-center">Edit & Delete Videos</h2>
+<hr />
+@{
+    if (ViewBag.Success != null)
+    {
+        <span class="alert-success text-bg-success">@ViewBag.Success</span>
+        <hr />
+    }
+    if (ViewBag.Error != null)
+    {
+        <span class="text-danger">@ViewBag.Error</span>
+        <hr />
+    }
+}
+
+<!-- #region Folder -->
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Edit or Delete Folder</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Videos" asp-action="EditOrDeleteFolder" class="form-group" enctype="multipart/form-data">
+
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <select asp-for="Id" id="folderList" class="form-control">
+                        <option>Choose Folder</option>
+                        @foreach (var item in await folder.GetAllAsync())
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label asp-for="Name">Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" asp-for="Name" placeholder="Folder's Name" Class="form-control" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+
+            </div>
+            <div class="row col-lg-12" style="margin-top:5px;">
+                <div class="col-lg-4">
+                    <label>Folder's Image</label>
+                </div>
+                <div class="col-lg-6 fileupload-buttonbar">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Upload Image</span>
+                        <input type="file" asp-for="Image" id="FolderImage">
+                        &nbsp;&nbsp;
+                        <span id="ImgFolderName"></span>
+                    </span><br />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-6" id="EditFolderImage">
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" name="submit" value="Edit" class="btn btn-lg btn-warning" style="margin-top:20px;" />
+                <input type="submit" name="submit" value="Delete" class="btn btn-lg btn-danger" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!-- #endregion -->
+
+<!-- #region Video -->
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Edit or Delete Videos</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Videos" asp-action="DeleteVideos" class="form-group" enctype="multipart/form-data">
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <select id="FolderList" asp-for="FolderId" class="form-control">
+                        <option>Choose Folder</option>
+                        @foreach (var item in await folder.GetAllAsync())
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-7" id="DeleteVideos">
+
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Delete" class="btn btn-lg btn-danger" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- #endregion -->
+
+<!-- #region Scripts -->
+@section JaqueryValidation
+    {
+    <script src="~/js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="~/jquery-validation/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+}
+@section AJaxScripts
+    {
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#FolderImage").change(function () {
+                $("#ImgFolderName").text($(this).val().replace("C:\\fakepath\\", " "));
+            });
+
+            $("#FolderList").change(function () {
+                $.ajax({
+                    url: '@Url.Action("GetVideos")',
+                    data: { FolderId: $(this).val() },
+                    type: 'POST',
+                    dataType: 'html',
+                    success: function (data) {
+                        $("#DeleteVideos").html(data);
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                })
+            });
+
+        });
+
+    </script>
+
+}
+
+<!-- #endregion -->

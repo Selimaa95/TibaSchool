@@ -1,0 +1,363 @@
+﻿@inject IFolder folder
+@inject IImages image
+@model ImgFolderEditDeleteVM
+@{
+    ViewData["Title"] = "EditDelete";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!-- #region Styles -->
+@section Styles
+    {
+
+    <!--external css-->
+
+
+
+}
+
+<!-- #endregion -->
+
+<h2 class="text-center">Edit & Delete Images</h2>
+<hr />
+@{
+    if (ViewBag.Success != null)
+    {
+        <span class="alert-success text-bg-success">@ViewBag.Success</span>
+        <hr />
+    }
+    if (ViewBag.Error != null)
+    {
+        <span class="text-danger">@ViewBag.Error</span>
+        <hr />
+    }
+}
+
+<!-- #region Folder -->
+ <div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Edit or Delete Folder</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Images" asp-action="EditOrDeleteFolder" class="form-group" enctype="multipart/form-data">
+
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <select asp-for="Id" id="DDLFolderForFolders" class="form-control">
+                        <option>Choose Folder</option>
+                        @foreach (var item in await folder.GetAllAsync())
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" asp-for="Name" placeholder="Folder's Name" Class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12" style="margin-top:5px;">
+                <div class="col-lg-4">
+                    <label>Folder's Image</label>
+                </div>
+                <div class="col-lg-6 fileupload-buttonbar">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Upload Image</span>
+                        <input type="file" asp-for="Image" id="FolderImage">
+                        &nbsp;&nbsp;
+                        <span id="ImgFolderName"></span>
+                    </span><br />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-6" id="EditFolderImage">
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" name="submit" value="Edit" class="btn btn-lg btn-warning" style="margin-top:20px;" />
+                <input type="submit" name="submit" value="Delete" class="btn btn-lg btn-danger" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+ <!-- #endregion -->
+
+<!-- #region Album -->
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Edit or Delete Album</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Images" asp-action="EditOrDeleteAlbum" class="form-group" enctype="multipart/form-data">
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <select id="FolderList" asp-for="FolderId" class="form-control">
+                        <option>Choose Folder</option>
+                        @foreach (var item in await folder.GetAllAsync())
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="FolderId"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Album's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <select id="AlbumList" name="id" asp-for="Id" class="form-control">
+                        <option>Choose Album</option>
+                    </select>
+                    <span asp-validation-for="Id"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Album's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <input type="text" asp-for="Name" placeholder="Album's Name" Class="form-control" />
+                </div>
+            </div>
+            <div class="row col-lg-12" style="margin-top:5px;">
+                <div class="col-lg-4">
+                    <label>Album's Image</label>
+                </div>
+                <div class="col-lg-6 fileupload-buttonbar">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Upload Image</span>
+                        <input type="file" asp-for="Image" id="AlbumImage">
+                        &nbsp;&nbsp;
+                        <span id="ImgAlbumName"></span>
+                    </span><br />
+                    <span asp-validation-for="Image"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-6" id="EditAlbumImage">
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" name="submit" value="Edit" class="btn btn-lg btn-warning" style="margin-top:20px;" />
+                <input type="submit" name="submit" value="Delete" class="btn btn-lg btn-danger" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+<!--#endregion-->
+
+<!-- #region Images -->
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Delete Images</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Images" asp-action="DeleteImages" class="form-group" enctype="multipart/form-data">
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Folder's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <select id="FolderList1" asp-for="FolderId" class="form-control">
+                        <option>Choose Folder</option>
+                        @foreach (var item in await folder.GetAllAsync())
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="FolderId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                    <label>Choose Album's Name</label>
+                </div>
+                <div class="col-lg-6">
+                    <select id="AlbumList1" asp-for="Id" class="form-control">
+                        <option>Choose Album</option>
+                    </select>
+                    <span asp-validation-for="Id" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="row col-lg-12">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-6" id="DeleteImages">
+                </div>
+            </div>
+            <div class="text-center">
+                <input type="submit" name="submit" value="Delete" class="btn btn-lg btn-danger" style="margin-top:20px;" />
+            </div>
+        </form>
+    </div>
+</div>
+<!-- #endregion -->
+
+<!-- #region Scripts -->
+@section JaqueryValidation
+    {
+    <script src="~/js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="~/jquery-validation/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+}
+
+@section AJaxScripts
+    {
+    <!-- #region Ajax Script -->
+    <script>
+
+        $(document).ready(function () {
+            $("#FolderImage").change(function () {
+                $("#ImgFolderName").text($(this).val().replace("C:\\fakepath\\", " "));
+            });
+
+            $("#AlbumImage").change(function () {
+                $("#ImgAlbumName").text($(this).val().replace("C:\\fakepath\\", " "));
+            });
+
+            $("#AlbumList1").change(function () {
+                $.ajax({
+                    url: '@Url.Action("GetAlbumImages")',
+                    data: { AlbumId: $(this).val() },
+                    type: 'POST',
+                    dataType: 'html',
+                    success: function (data) {
+                        $("#DeleteImages").html(data);
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                })
+            });
+
+        });
+
+        $(function () {
+
+            $("#FolderList").change(function () {
+                $("#AlbumList").empty();
+                $("#AlbumList").append("<option>Choose Album</option>");
+
+                var FolderId = $("#FolderList option:selected").val();
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "/Images/GetAlbumByFolderId",
+                    data: { folderId: FolderId },
+                    success: function (res) {
+                        $.each(res, function (i, e) {
+
+                            $("#AlbumList").append("<option value='" + e.Id + "'>" + e.Name + "</option>");
+
+                        });
+
+                        //$('select').selectpiker('refresh');
+                    }
+                });
+            });
+        });
+
+        $(function () {
+
+            $("#FolderList1").change(function () {
+                $("#AlbumList1").empty();
+                $("#AlbumList1").append("<option>Choose Album</option>");
+
+                var FolderId = $("#FolderList1 option:selected").val();
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "/Images/GetAlbumByFolderId",
+                    data: { folderId: FolderId },
+                    success: function (res) {
+                        $.each(res, function (i, e) {
+
+                            $("#AlbumList1").append("<option value='" + e.Id + "'>" + e.Name + "</option>");
+
+                        });
+
+                        //$('select').selectpiker('refresh');
+                    }
+                });
+            });
+        });
+
+
+
+        $(function () {
+            $("#DDLFolderForFolders").change(function () {
+                $.ajax({
+                    url: "/Images/GetFolderImage",
+                    data: { FolderId: $(this).val() },
+                    type: 'POST',
+                    dataType: 'html',
+                    success: function (data) {
+                        $("#EditFolderImage").html(data);
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                })
+            });
+        });
+
+        $(function () {
+            $("#AlbumList").change(function () {
+                $.ajax({
+                    url: "/Images/GetAlbumImage",
+                    data: { AlbumId: $(this).val() },
+                    type: 'POST',
+                    dataType: 'html',
+                    success: function (data) {
+                        $("#EditAlbumImage").html(data);
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                })
+            });
+        });
+    </script>
+
+}
+
+<!-- #endregion -->
+<!-- #endregion -->

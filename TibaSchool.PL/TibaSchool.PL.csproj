@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\css\fileuploader\**" />
+    <Content Remove="wwwroot\css\fileuploader\**" />
+    <EmbeddedResource Remove="wwwroot\css\fileuploader\**" />
+    <None Remove="wwwroot\css\fileuploader\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Shared\_imageToDelete.cshtml~RF67736da1.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.16" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TibaSchool.BL\TibaSchool.BL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Partials\" />
+    <Folder Include="wwwroot\Files\ImagesVideo\" />
+    <Folder Include="wwwroot\Files\UploadedImages\" />
+  </ItemGroup>
+
+</Project>

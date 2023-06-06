@@ -1,0 +1,66 @@
+﻿@model EventVM
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h3 class="mb-0">Update <span style="color:#2c7be5">@Model.Title</span></h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-light">
+        <form asp-controller="Event" asp-action="Update" class="form-group" enctype="multipart/form-data">
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Title">Title</label>
+                <input type="text" asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Date">Date</label>
+                <input type="date" asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Image">Image</label>
+                <input type="hidden" asp-for="ImageName" />
+                <input type="file" asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+                <img src="~/Files/UploadedImages/@Model.ImageName" alt="@Model.Title" width="300" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description">Description</label>
+                <textarea asp-for="Description" rows="4" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+         
+
+            <center>
+                <input type="submit" value="Update" class="btn btn-warning" />
+                <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+                <a asp-action="Index" class="btn btn-success">Return</a>
+            </center>
+        </form>
+    </div>
+</div>
+
+
+
+
+@section JaqueryValidation
+    {
+    <script src="~/js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="~/jquery-validation/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+

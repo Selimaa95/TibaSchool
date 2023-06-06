@@ -1,0 +1,521 @@
+﻿@inject TibaSchool.BL.Interface.IEvent obj
+
+
+@{
+    ViewData["Title"] = "TIBA - Home";
+}
+
+
+
+<!-- #region Content Page -->
+<!-- Slide1 -->
+<section class="section-slide">
+    <div class="wrap-slick1">
+        <div class="slick1">
+            <div class="item-slick1 item1-slick1" style="background-image: url(images/slide1-01.jpg);">
+                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                    <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+                        Welcome to
+                    </span>
+
+                    <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+                        TIBA
+                    </h2>
+                    <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp" style="font-size: 30px;">
+                        International School
+                    </h2>
+
+                    <div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+                        <!-- Button1 -->
+                        <a asp-controller="Home" asp-action="Admission" class="btn1 flex-c-m size1 txt3 trans-0-4">
+                            Admission
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-slick1 item2-slick1" style="background-image: url(images/master-slides-02.jpg);">
+                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                    <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
+                        Welcome to
+                    </span>
+
+                    <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
+                        TIBA
+                    </h2>
+
+                    <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn" style="font-size: 30px;">
+                        International School
+                    </h2>
+
+                    <div class="wrap-btn-slide1 animated visible-false" data-appear="slideInUp">
+                        <!-- Button1 -->
+                        <a asp-controller="Home" asp-action="Admission" class="btn1 flex-c-m size1 txt3 trans-0-4">
+                            Admission
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-slick1 item3-slick1" style="background-image: url(images/master-slides-01.jpg);">
+                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                    <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
+                        Welcome to
+                    </span>
+
+                    <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
+                        TIBA
+                    </h2>
+
+                    <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight" style="font-size: 30px;">
+                        International School
+                    </h2>
+
+                    <div class="wrap-btn-slide1 animated visible-false" data-appear="rotateIn">
+                        <!-- Button1 -->
+                        <a asp-controller="Home" asp-action="Admission" class="btn1 flex-c-m size1 txt3 trans-0-4">
+                            Admission
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrap-slick1-dots"></div>
+    </div>
+</section>
+
+<!-- Welcome -->
+<section class="section-welcome bg1-pattern p-t-120 p-b-105">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 p-t-45 p-b-30">
+                <div class="wrap-text-welcome t-center">
+                    <span class="tit2 t-center">
+                        TIBA International School
+                    </span>
+
+                    <h3 class="tit3 t-center m-b-35 m-t-5">
+                        Welcome
+                    </h3>
+
+                    <p class=" m-b-22 size3 m-l-r-auto" style="text-align: left; text-align: justify;">
+                        Dear students / parents<br>
+                        I would like to take this opportunity to welcome you to Tiba American School,<br>
+                        TIS has turned to be a unique, sustainable, dynamic and 21st century educational model school with extraordinary team efforts.<br>
+                        I am very proud of the TIS Team; they understand and are passionate about the commitment to create empowered learning pathways for our students.<br>
+                        Our young students are growing into a future that is rapidly changing. They know the jobs of today will look very different than the ones for tomorrow. <br>
+                        They know the answer to this is for young people to develop a strong awareness of themselves, others and place, and to be confident in their ability to face challenges, adapt and change. They know ‘The TIS Way ‘support this, and their work with their students is vitally important to the success of this!<br>
+                        The goal of TIS is EXCELLENCE and the striving to reach this goal must depend on cooperation between all school community from parents, teachers and administrators. <br>
+                        According to this cooperation we assure that the result will be well worth of the efforts.<br>
+                        This student’s handbook contains all school rules; you should always remember that obeying these rules will help you to avoid facing a lot of problems.<br>
+                        I look forward to this school year and wish each of you the very best in the many opportunities that await you.
+                        Make the most of them with mutual respect and cooperation we can succeed together.<br>
+                        My door is always open to you.<br>
+                        Let me know how I can help .<br>
+
+
+                    </p>
+
+                    <a asp-controller="Home" asp-action="About" class="txt4">
+                        <b>More About Us</b>
+                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 p-b-30">
+                <div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
+                    <img src="~/images/our-story-01.jpg" alt="IMG-OUR">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Intro -->
+<section class="section-intro">
+    <div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url(images/bg-intro-01.jpg);">
+        <span class="tit2 p-l-15 p-r-15">
+            Discover
+        </span>
+
+        <h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+            Tiba<br> International School
+        </h3>
+    </div>
+
+    <div class="content-intro bg-white p-t-77 p-b-133">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 p-t-30">
+                    <!-- Block1 -->
+                    <div class="blo1">
+                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+                            <a asp-controller="Home" asp-action="About"><img src="~/images/intro-01.jpg" alt="IMG-INTRO"></a>
+                        </div>
+
+                        <div class="wrap-text-blo1 p-t-35">
+                            <a asp-controller="Home" asp-action="About">
+                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                    VISION
+                                </h4>
+                            </a>
+
+                            <p class="m-b-20">
+                                Educating by providing high quality international education for all students of different ages, cultures and needs to become global thinker’s ,.......
+                            </p>
+
+                            <a asp-controller="Home" asp-action="About" class="txt4">
+                                Learn More
+                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-t-30">
+                    <!-- Block1 -->
+                    <div class="blo1">
+                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+                            <a asp-controller="Home" asp-action="About"><img src="~/images/intro-02.jpg" alt="IMG-INTRO"></a>
+                        </div>
+
+                        <div class="wrap-text-blo1 p-t-35">
+                            <a asp-controller="Home" asp-action="About">
+                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                    MISSION
+                                </h4>
+                            </a>
+
+                            <p class="m-b-20">
+                                To create learning, secure, friendly, creative, and motivating environment that develop all students by enriching experience to meet academic......
+                            </p>
+
+                            <a asp-controller="Home" asp-action="About" class="txt4">
+                                Learn More
+                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-t-30">
+                    <!-- Block1 -->
+                    <div class="blo1">
+                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+                            <a asp-controller="Home" asp-action="About"><img src="~/images/intro-04.jpg" alt="IMG-INTRO"></a>
+                        </div>
+
+                        <div class="wrap-text-blo1 p-t-35">
+                            <a asp-controller="Home" asp-action="About">
+                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                    Philosophy
+                                </h4>
+                            </a>
+
+                            <p class="m-b-20">
+                                TIS provides a co-educational, English language, college preparatory program that culminates in awarding eligible students an American ......
+
+                            </p>
+
+                            <a asp-controller="Home" asp-action="About" class="txt4">
+                                Learn More
+                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our menu -->
+<section class="section-ourmenu bg2-pattern p-t-115 p-b-120">
+    <div class="container">
+        <div class="title-section-ourmenu t-center m-b-22">
+            <span class="tit2 t-center">
+                Discover
+            </span>
+
+            <h3 class="tit5 t-center m-t-2">
+                Our Schools
+            </h3>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <!-- Item our menu -->
+                        <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+                            <img src="~/images/our-menu-01.jpg" alt="IMG-MENU">
+
+                            <!-- Button2 -->
+                            <a asp-controller="Home" asp-action="OurSchool" class="btn2 flex-c-m txt5 ab-c-m size4">
+                                Nursery
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <!-- Item our menu -->
+                        <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+                            <img src="~/images/our-menu-05.jpg" alt="IMG-MENU">
+
+                            <!-- Button2 -->
+                            <a asp-controller="Home" asp-action="OurSchool" class="btn2 flex-c-m txt5 ab-c-m size5">
+                                Primary
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <!-- Item our menu -->
+                        <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+                            <img src="~/images/our-menu-13.jpg" alt="IMG-MENU">
+
+                            <!-- Button2 -->
+                            <a asp-controller="Home" asp-action="OurSchool" class="btn2 flex-c-m txt5 ab-c-m size6">
+                                Middle
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Item our menu -->
+                        <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+                            <img src="~/images/our-menu-08.jpg" alt="IMG-MENU">
+
+                            <!-- Button2 -->
+                            <a asp-controller="Home" asp-action="OurSchool" class="btn2 flex-c-m txt5 ab-c-m size7">Secondary</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <!-- Item our menu -->
+                        <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+                            <img src="~/images/our-menu-10.jpg" alt="IMG-MENU">
+
+                            <!-- Button2 -->
+                            <a asp-controller="Home" asp-action="About" class="btn2 flex-c-m txt5 ab-c-m size8">Facilities</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <!-- Item our menu -->
+                        <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+                            <img src="~/images/our-menu-16.jpg" alt="IMG-MENU">
+
+                            <!-- Button2 -->
+                            <a asp-controller="Home" asp-action="About" class="btn2 flex-c-m txt5 ab-c-m size9">
+                                Activities
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Event -->
+<section class="section-event">
+    <div class="wrap-slick2">
+        <div class="slick2">
+            <div class="item-slick2 item1-slick2" style="background-image: url(images/bg-event-01.jpg);">
+                <div class="wrap-content-slide2 p-t-115 p-b-208">
+                    <div class="container">
+                        <!-- - -->
+                        <div class="title-event t-center m-b-52">
+                            <span class="tit2 p-l-15 p-r-15">
+                                Belief
+                            </span>
+
+                            <h3 class="tit6 t-center p-l-15 p-r-15 p-t-3">
+                                Statements
+                            </h3>
+                        </div>
+
+                        <!-- Block2 -->
+                        <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn">
+                            <!-- Pic block2 -->
+                            <a asp-controller="Home" asp-action="About" class="wrap-pic-blo2 bg1-blo2" style="background-image: url(images/event-02.jpg);">
+                                <div class="time-event size10 txt6 effect1">
+                                    <span class="txt-effect1 flex-c-m t-center">
+                                        Belief Statements
+                                    </span>
+                                </div>
+                            </a>
+
+                            <!-- Text block2 -->
+                            <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
+                                <h4 class="tit7 t-center m-b-10">
+                                    Belief Statements
+                                </h4>
+
+                                <p class="t-center">
+                                    *	student learning is our priority. <br>
+                                    *	 learning is a partnership among home, school, and community.  <br>
+                                    *	 all students have the ability to learn.<br>
+                                    *	 students learn in different ways. <br>
+                                    *	 learning is a lifelong process. <br>
+                                    * School environment  must be safe, secure  supportive, and socially just which is essential for learning and teaching   <br>
+                                    *	everyone must be treated with dignity and respect.<br>
+                                    * Every student  has a ‘voice’ and that this voice should be listened to and encouraged.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item-slick2 item3-slick2" style="background-image: url(images/bg-event-04.jpg);">
+                <div class="wrap-content-slide2 p-t-115 p-b-208">
+                    <div class="container">
+                        <!-- - -->
+                        <div class="title-event t-center m-b-52">
+                            <span class="tit2 p-l-15 p-r-15">
+                                Belief
+                            </span>
+
+                            <h3 class="tit6 t-center p-l-15 p-r-15 p-t-3">
+                                Statements
+                            </h3>
+                        </div>
+
+                        <!-- Block2 -->
+                        <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="rotateInUpLeft">
+                            <!-- Pic block2 -->
+                            <a asp-controller="Home" asp-action="About" class="wrap-pic-blo2 bg3-blo2" style="background-image: url(images/event-01.jpg);">
+                                <div class="time-event size10 txt6 effect1">
+                                    <span class="txt-effect1 flex-c-m">
+                                        Belief Statements
+                                    </span>
+                                </div>
+                            </a>
+
+                            <!-- Text block2 -->
+                            <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
+                                <h4 class="tit7 t-center m-b-10">
+                                    Belif Statements
+                                </h4>
+
+                                <p class="t-center">
+
+                                    *	We must strive always to make learning successful and we can do this best by skilful teaching (having the highest possible expectations), of a relevant, creative, exciting school curriculum (both in and out of lessons)<br>
+                                    *	-Give assignments that make learning relevant.<br>
+                                    *	-Be good adult model.<br>
+                                    *	-Exhibit a caring, honest and professional attitude.<br>
+                                    *	Stakeholder involvement, which includes partnerships with parents, community, and governmental agencies, enhances student achievement.<br>
+
+                                    *	- -Abide by policies and regulations
+
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrap-slick2-dots"></div>
+    </div>
+</section>
+
+
+<!-- Blog -->
+<section class="section-blog bg-white p-t-115 p-b-123">
+    <div class="container">
+        <div class="title-section-ourmenu t-center m-b-22">
+            <span class="tit2 t-center">
+                Latest News
+            </span>
+
+            <h3 class="tit5 t-center m-t-2">
+                News & Events
+            </h3>
+        </div>
+
+        <div class="row">
+            @foreach (var item in obj.GetAllAsync().Result.OrderByDescending(x => x.Id).Take(3).ToList())
+            {
+                <div class="col-md-4 p-t-30">
+                    <!-- Block1 -->
+                    @*<div class="blo1">
+                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                            <a asp-controller="Home" asp-action="News"><img src="~/Files/UploadedImages/@item.ImageName" alt="IMG-INTRO" width="200"></a>
+
+                            <div class="time-blog">
+                                @item.Date.ToString("d MMM yyyy")
+                            </div>
+                        </div>
+
+                        <div class="wrap-text-blo1 p-t-35">
+                            <a asp-controller="Home" asp-action="News">
+                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                    @item.Title
+                                </h4>
+                            </a>
+                        </div>
+
+                        <a asp-controller="Home" asp-action="News" class="txt4">
+                            Continue Reading
+                            <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                        </a>
+                    </div>*@
+                    <div class="blo1">
+                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative" style="text-align:center">
+                            <a>
+                                <img src="~/Files/UploadedImages/@item.ImageName" alt="IMG-INTRO" style="height:200px; width:300px;">
+                            </a>
+
+                            <div class="time-blog">
+                                @item.Date.ToString("d MMM yyyy")
+                            </div>
+                        </div>
+
+                        <div class="wrap-text-blo1 p-t-35">
+                            <a>
+                                <h4 class="txt5 color0-hov trans-0-4 m-b-13" style="text-align:center">
+                                    @item.Title
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+             }
+        </div>        
+    </div>
+</section>
+
+
+<!-- Sign up -->
+<div class="section-signup bg1-pattern p-t-85 p-b-85">
+    <div class="container">
+        <div class="title-section-ourmenu t-center m-b-22">
+            <span class="tit2 t-center" style="margin-bottom: 30px;">
+                Location
+            </span>
+        </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2028.0347436094517!2d30.014991300691108!3d31.255778120982868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sTiba+International+School+-+National+Department%2C+instruction+between+45+st+and+Mostafa++Kamel..Miamy.Alex%2C+21923+Alexandria!5e0!3m2!1sen!2seg!4v1565178229248!5m2!1sen!2seg" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    </div>
+</div>
+
+<!-- #endregion -->

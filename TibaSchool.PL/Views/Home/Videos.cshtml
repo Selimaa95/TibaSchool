@@ -1,0 +1,58 @@
+﻿@model IEnumerable<VideoVM>
+
+@{
+    ViewData["Title"] = "Videos";
+}
+
+
+<!-- #region Content -->
+<!-- Title Page -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(/images/bg-title-page-02.jpg);">
+    <h2 class="tit6 t-center">
+        Videos
+    </h2>
+</section>
+
+
+<!-- Gallery -->
+<div class="container" style="margin-bottom: 10px;">
+   
+    <br />
+    <div class="title-section-ourmenu t-center m-b-22">
+        <h3 class="tit5 t-center m-t-2" style="color:darkred">
+            Videos List
+        </h3>
+    </div>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 p-t-50">
+                <!-- Block1 -->
+                <div class="blo1" style="text-align: center">
+                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+                        <a href="#!" data-link="@item.Path.Replace("watch?v=","embed/")">
+                            <iframe data-link="@item.Path.Replace("watch?v=","embed/")" style="height: auto; max-width: 100%" src="@item.Path.Replace("watch?v=","embed/")" allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+                    <div class="wrap-text-blo1 p-t-35 text-center">
+                        <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                            @item.Name
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+
+<!-- #endregion -->
+
+<!-- #region JS Librariese -->
+@section JSLibrary
+    {
+    <script type="text/javascript" src="~/vendor/isotope/isotope.pkgd.min.js"></script>
+}
+<!-- #endregion -->
